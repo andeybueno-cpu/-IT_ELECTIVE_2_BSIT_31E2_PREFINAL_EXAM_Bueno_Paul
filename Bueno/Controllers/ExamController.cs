@@ -65,6 +65,13 @@ namespace ExamApp.Controllers
                 CorrectAnswer = "B. Foreign key referencing Section",
                 Category = "Conceptual Data Architecture"
             },
+            new ExamQuestion {
+                Number = 9,
+                Question = "What is the purpose of a navigation property such as public Section Section { get; set; }?",
+                Options = new() { "A. It stores the database password", "B. It represents a relationship to another entity", "C. It creates a new database", "D. It validates the student's name" },
+                CorrectAnswer = "B. It represents a relationship to another entity",
+                Category = "Conceptual Data Architecture"
+            },
         };
 
         public IActionResult Index(string? search, string? category)
