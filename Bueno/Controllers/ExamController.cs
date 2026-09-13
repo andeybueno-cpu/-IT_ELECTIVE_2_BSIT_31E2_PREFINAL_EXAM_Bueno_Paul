@@ -51,6 +51,13 @@ namespace ExamApp.Controllers
                 CorrectAnswer = "B. appsettings.json",
                 Category = "Conceptual Data Architecture"
             },
+            new ExamQuestion {
+                Number = 7,
+                Question = "A Student belongs to exactly one Section, while a Section can contain many students. What type of relationship is this?",
+                Options = new() { "A. One-to-One", "B. One-to-Many", "C. Many-to-Many", "D. Many-to-One only" },
+                CorrectAnswer = "B. One-to-Many",
+                Category = "Conceptual Data Architecture"
+            },
         };
 
         public IActionResult Index(string? search, string? category)
