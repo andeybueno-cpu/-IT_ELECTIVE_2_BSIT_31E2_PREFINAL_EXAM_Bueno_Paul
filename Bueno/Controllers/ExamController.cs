@@ -142,6 +142,13 @@ namespace ExamApp.Controllers
                 CorrectAnswer = "B. Display a Not Found (404) response/page",
                 Category = "CRUD Operations & SQL"
             },
+            new ExamQuestion {
+                Number = 20,
+                Question = "A student already belongs to Section A for a particular subject. The application attempts to assign the same student to Section A again. What is the primary concern?",
+                Options = new() { "A. Data integrity", "B. HTML formatting", "C. CSS inheritance", "D. Razor syntax" },
+                CorrectAnswer = "A. Data integrity",
+                Category = "CRUD Operations & SQL"
+            }
         };
 
         public IActionResult Index(string? search, string? category)
