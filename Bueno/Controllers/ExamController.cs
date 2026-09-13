@@ -15,6 +15,15 @@ namespace ExamApp.Controllers
                 Explanation = "Databases ensure persistent storage across restarts.",
                 Category = "Database Fundamentals"
             },
+            new ExamQuestion {
+                Number = 2,
+                Question = "Which approach is being used when an existing database is used to generate EF Core entity classes?",
+                Options = new() { "A. Code-First", "B. Database-First", "C. Model-First", "D. Controller-First" },
+                CorrectAnswer = "B. Database-First",
+                Explanation = "Database-First reverse engineers entities from schema.",
+                Category = "EF Core Architecture"
+            },
+            
         };
 
         public IActionResult Index(string? search, string? category)
