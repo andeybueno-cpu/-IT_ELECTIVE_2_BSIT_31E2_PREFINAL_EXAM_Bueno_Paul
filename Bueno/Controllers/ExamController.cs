@@ -37,6 +37,13 @@ namespace ExamApp.Controllers
                 CorrectAnswer = "A. DbContext",
                 Category = "Relational Data Modeling"
             },
+            new ExamQuestion {
+                Number = 5,
+                Question = "What does the following command primarily do? dotnet ef dbcontext scaffold \"ConnectionString\" Microsoft.EntityFrameworkCore.SqlServer -o Models",
+                Options = new() { "A. Deletes the database", "B. Creates a new MVC project", "C. Generates EF Core models and a DbContext from an existing database", "D. Starts the MVC application" },
+                CorrectAnswer = "C. Generates EF Core models and a DbContext from an existing database",
+                Category = "Relational Data Modeling"
+            },
         };
 
         public IActionResult Index(string? search, string? category)
