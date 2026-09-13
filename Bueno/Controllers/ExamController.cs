@@ -58,6 +58,13 @@ namespace ExamApp.Controllers
                 CorrectAnswer = "B. One-to-Many",
                 Category = "Conceptual Data Architecture"
             },
+            new ExamQuestion {
+                Number = 8,
+                Question = "In the following example, what is SectionId? public int SectionId { get; set; } public Section Section { get; set; }",
+                Options = new() { "A. Primary key of Student", "B. Foreign key referencing Section", "C. Navigation property", "D. Database connection string" },
+                CorrectAnswer = "B. Foreign key referencing Section",
+                Category = "Conceptual Data Architecture"
+            },
         };
 
         public IActionResult Index(string? search, string? category)
