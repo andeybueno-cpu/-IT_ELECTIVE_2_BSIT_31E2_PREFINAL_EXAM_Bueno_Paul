@@ -23,7 +23,13 @@ namespace ExamApp.Controllers
                 Explanation = "Database-First reverse engineers entities from schema.",
                 Category = "EF Core Architecture"
             },
-            
+            new ExamQuestion {
+                Number = 3,
+                Question = "What is the primary purpose of Entity Framework Core?",
+                Options = new() { "A. To create HTML pages automatically", "B. To replace the MVC Controller", "C. To map objects in code to relational database data", "D. To replace the C# compiler" },
+                CorrectAnswer = "C. To map objects in code to relational database data",
+                Category = "Relational Data Modeling"
+            },
         };
 
         public IActionResult Index(string? search, string? category)
