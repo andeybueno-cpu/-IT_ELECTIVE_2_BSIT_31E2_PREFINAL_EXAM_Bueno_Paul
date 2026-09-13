@@ -1,0 +1,59 @@
+﻿@model IEnumerable<ExamApp.Models.ExamQuestion>
+
+@{
+    ViewData["Title"] = "Prefinal Exam Answers";
+}
+
+<div class="container my-4">
+    <div class="p-4 mb-4 bg-primary text-white rounded-3 shadow">
+        <h1>IT ELECTIVE 2 – Web System and Technologies</h1>
+        <p class="lead mb-0">Prefinal Examination Interactive Reviewer</p>
+    </div>
+
+    <form method="get" class="row g-3 mb-4">
+        <div class="col-md-6">
+            <input type="text" name="search" class="form-control" placeholder="Search question..." value="@Context.Request.Query["search"]" />
+        </div>
+        <div class="col-md-4">
+            <select name="category" class="form-select">
+                <option value="">-- Filter by Topic --</option>
+                @foreach (var cat in (List<string>)ViewBag.Categories)
+                {
+                    <option value="@cat">@cat</option>
+                }
+            </select>
+        </div>
+        <div class="col-md-2">
+            <button type="submit" class="btn btn-dark w-100">Filter</button>
+        </div>
+    </form>
+
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        @foreach (var q in Model)
+        {
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+                        <span class="fw-bold">Item #@q.Number</span>
+                        <span class="badge bg-info text-dark">@q.Category</span>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title text-secondary">@q.Question</h6>
+                        <ul class="list-group list-group-flush my-3">
+                            @foreach (var opt in q.Options)
+                            {
+                                var isCorrect = opt == q.CorrectAnswer;
+                                <li class="list-group-item @(isCorrect ? "list-group-item-success fw-bold" : "")">
+                                    @opt @(isCorrect ? "✓" : "")
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-light">
+                        <small class="text-muted"><strong>Reason:</strong> @q.Explanation</small>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
