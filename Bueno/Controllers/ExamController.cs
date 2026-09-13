@@ -30,6 +30,13 @@ namespace ExamApp.Controllers
                 CorrectAnswer = "C. To map objects in code to relational database data",
                 Category = "Relational Data Modeling"
             },
+            new ExamQuestion {
+                Number = 4,
+                Question = "Which EF Core component is primarily responsible for communicating with the database?",
+                Options = new() { "A. DbContext", "B. DbSetView", "C. ControllerContext", "D. RazorContext" },
+                CorrectAnswer = "A. DbContext",
+                Category = "Relational Data Modeling"
+            },
         };
 
         public IActionResult Index(string? search, string? category)
