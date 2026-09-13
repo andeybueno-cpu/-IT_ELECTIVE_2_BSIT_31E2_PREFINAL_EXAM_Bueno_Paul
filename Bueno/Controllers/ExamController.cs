@@ -114,6 +114,13 @@ namespace ExamApp.Controllers
                 CorrectAnswer = "B. Student Number should be unique",
                 Category = "Data Normalization & Integrity"
             },
+            new ExamQuestion {
+                Number = 16,
+                Question = "Which is the best reason for having a database-level unique constraint on StudentNumber?",
+                Options = new() { "A. It protects data integrity even if application-level validation is bypassed", "B. It makes Razor Views render faster", "C. It removes the need for a Controller", "D. It automatically creates a ViewModel" },
+                CorrectAnswer = "A. It protects data integrity even if application-level validation is bypassed",
+                Category = "CRUD Operations & SQL"
+            },
         };
 
         public IActionResult Index(string? search, string? category)
