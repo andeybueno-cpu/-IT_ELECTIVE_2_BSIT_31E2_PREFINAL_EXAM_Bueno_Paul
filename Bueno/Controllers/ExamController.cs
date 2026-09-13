@@ -100,6 +100,13 @@ namespace ExamApp.Controllers
                 CorrectAnswer = "B. Client-side validation",
                 Category = "Data Normalization & Integrity"
             },
+            new ExamQuestion {
+                Number = 14,
+                Question = "Why is server-side validation still necessary if client-side validation exists?",
+                Options = new() { "A. Client-side validation can be bypassed", "B. Client-side validation automatically modifies the database", "C. Server-side validation only works with SQLite", "D. Client-side validation cannot display messages" },
+                CorrectAnswer = "A. Client-side validation can be bypassed",
+                Category = "Data Normalization & Integrity"
+            },
         };
 
         public IActionResult Index(string? search, string? category)
