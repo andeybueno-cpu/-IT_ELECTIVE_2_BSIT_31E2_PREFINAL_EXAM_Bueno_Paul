@@ -79,6 +79,12 @@ namespace ExamApp.Controllers
                 CorrectAnswer = "B. Load related Section data together with Students",
                 Category = "Conceptual Data Architecture"
             },
+            new ExamQuestion {
+                Number = 11,
+                Question = "Why might a ViewModel be used when displaying Student and Section information?",
+                Options = new() { "A. To replace the database", "B. To combine or shape the data specifically needed by the view", "C. To automatically create database tables", "D. To prevent controllers from using LINQ" },
+                CorrectAnswer = "B. To combine or shape the data specifically needed by the view",
+                Category = "Data Normalization & Integrity"
         };
 
         public IActionResult Index(string? search, string? category)
