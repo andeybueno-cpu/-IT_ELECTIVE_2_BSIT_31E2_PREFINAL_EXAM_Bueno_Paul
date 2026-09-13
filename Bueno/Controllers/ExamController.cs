@@ -72,6 +72,13 @@ namespace ExamApp.Controllers
                 CorrectAnswer = "B. It represents a relationship to another entity",
                 Category = "Conceptual Data Architecture"
             },
+            new ExamQuestion {
+                Number = 10,
+                Question = "What does .Include() generally allow EF Core to do?",
+                Options = new() { "A. Delete the Section table", "B. Load related Section data together with Students", "C. Create a new Student", "D. Validate Student input" },
+                CorrectAnswer = "B. Load related Section data together with Students",
+                Category = "Conceptual Data Architecture"
+            },
         };
 
         public IActionResult Index(string? search, string? category)
