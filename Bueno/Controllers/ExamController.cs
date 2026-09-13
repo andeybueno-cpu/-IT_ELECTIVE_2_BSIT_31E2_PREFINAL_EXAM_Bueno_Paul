@@ -121,6 +121,13 @@ namespace ExamApp.Controllers
                 CorrectAnswer = "A. It protects data integrity even if application-level validation is bypassed",
                 Category = "CRUD Operations & SQL"
             },
+            new ExamQuestion {
+                Number = 17,
+                Question = "What is the purpose of a try...catch block in a controller?",
+                Options = new() { "A. To create navigation properties", "B. To catch and handle exceptions that may occur during execution", "C. To generate database tables", "D. To perform client-side validation" },
+                CorrectAnswer = "B. To catch and handle exceptions that may occur during execution",
+                Category = "CRUD Operations & SQL"
+            },
         };
 
         public IActionResult Index(string? search, string? category)
