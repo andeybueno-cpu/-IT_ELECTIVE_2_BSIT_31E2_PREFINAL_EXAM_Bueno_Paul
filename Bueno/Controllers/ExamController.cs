@@ -135,6 +135,13 @@ namespace ExamApp.Controllers
                 CorrectAnswer = "B. UseExceptionHandler()",
                 Category = "CRUD Operations & SQL"
             },
+            new ExamQuestion {
+                Number = 19,
+                Question = "A user requests /Student/999, but Student 999 does not exist. What would be the most appropriate response?",
+                Options = new() { "A. Display the student's information anyway", "B. Display a Not Found (404) response/page", "C. Delete Student 999", "D. Create Student 999 automatically" },
+                CorrectAnswer = "B. Display a Not Found (404) response/page",
+                Category = "CRUD Operations & SQL"
+            },
         };
 
         public IActionResult Index(string? search, string? category)
