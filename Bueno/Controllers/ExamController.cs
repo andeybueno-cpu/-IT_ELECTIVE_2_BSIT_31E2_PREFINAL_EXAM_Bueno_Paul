@@ -128,6 +128,13 @@ namespace ExamApp.Controllers
                 CorrectAnswer = "B. To catch and handle exceptions that may occur during execution",
                 Category = "CRUD Operations & SQL"
             },
+            new ExamQuestion {
+                Number = 18,
+                Question = "Which middleware is commonly used in ASP.NET Core for centralized exception handling?",
+                Options = new() { "A. UseDatabase()", "B. UseExceptionHandler()", "C. UseValidationHandler()", "D. UseMvcDatabase()" },
+                CorrectAnswer = "B. UseExceptionHandler()",
+                Category = "CRUD Operations & SQL"
+            },
         };
 
         public IActionResult Index(string? search, string? category)
