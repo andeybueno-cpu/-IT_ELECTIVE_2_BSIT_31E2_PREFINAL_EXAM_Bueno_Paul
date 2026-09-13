@@ -44,6 +44,13 @@ namespace ExamApp.Controllers
                 CorrectAnswer = "C. Generates EF Core models and a DbContext from an existing database",
                 Category = "Relational Data Modeling"
             },
+            new ExamQuestion {
+                Number = 6,
+                Question = "Where is a database connection string commonly stored in an ASP.NET Core MVC application?",
+                Options = new() { "A. Program.cs only", "B. appsettings.json", "C. Index.cshtml", "D. Student.cs" },
+                CorrectAnswer = "B. appsettings.json",
+                Category = "Conceptual Data Architecture"
+            },
         };
 
         public IActionResult Index(string? search, string? category)
