@@ -85,6 +85,14 @@ namespace ExamApp.Controllers
                 Options = new() { "A. To replace the database", "B. To combine or shape the data specifically needed by the view", "C. To automatically create database tables", "D. To prevent controllers from using LINQ" },
                 CorrectAnswer = "B. To combine or shape the data specifically needed by the view",
                 Category = "Data Normalization & Integrity"
+            },
+            new ExamQuestion {
+                Number = 12,
+                Question = "Consider this query: var students = _context.Students.Include(s => s.Section).ToList(); What is the main benefit of Include(s => s.Section)?",
+                Options = new() { "A. It loads the related Section navigation property", "B. It creates a Section object manually", "C. It removes the foreign key", "D. It prevents the query from accessing the database" },
+                CorrectAnswer = "A. It loads the related Section navigation property",
+                Category = "Data Normalization & Integrity"
+            },
         };
 
         public IActionResult Index(string? search, string? category)
